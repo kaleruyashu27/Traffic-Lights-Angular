@@ -1,0 +1,16 @@
+
+<div class="traffic-light-container">
+    <h1 class="traffic-light-heading text-center">Traffic Light</h1>
+    <div class="d-flex flex-row justify-content-center m-5">
+        <div class="d-flex flex-column">
+            <button id="stopButton" class="button" [ngClass] = "{'stop':static == 'red'}" (click) ="turnOnRed()">Stop</button>
+            <button id="readyButton" class="button" [ngClass] = "{'ready':static == 'yellow'}" (click) ="turnOnYellow()">Ready</button>
+            <button id="goButton" class="button" [ngClass] = "{'go':static == 'green'}" (click) ="turnOnGreen()">Go</button>
+        </div>
+        <div class="traffic-light">
+            <div id="stopLight" class="bulb" [ngClass] = "{'stop':static == 'red'}"></div>
+            <div id="readyLight" class="bulb" [ngClass] = "{'ready':static == 'yellow'}" ></div>
+            <div id="goLight" class="bulb" [ngClass] = "{'go':static == 'green'}"></div>
+        </div>
+    </div>
+</div>
